@@ -16,12 +16,12 @@
     <nav>
         <div class="nav-wrapp">
             <a href="#">Authentication</a>
-            <url id="nav-mobile" class="right hide-on-and-down">
-                <li>Ulser list</li>
-                <li>User create</li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Logout</a></li>
-            </url>
+            <ul id="nav-mobile" class="right hide-on-and-down">
+                <li><a href="{% url 'listar_usuario' %}">User list</a></li>
+                <li><a href="{% url 'registrar_usuario' %}">User create</a></li>
+                <li><a href="{% url 'logar' %}">Login</a></li>
+                <li><a href="{% url 'deslogar' %}">Logout</a></li>
+            </ul>
         </div>
     </nav>
     <div class="container">

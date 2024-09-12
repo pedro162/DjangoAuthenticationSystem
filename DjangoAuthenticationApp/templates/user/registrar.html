@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" id="username" placeholder="Nome do usuário" >
+    <input type="email" name="email" id="email" placeholder="E-mail" >
+    <input type="password" name="password" id="password" placeholder="Senha" >
+    <div class="input-field col s12">
+        <select name="tipo_usuario" id="">
+            <option value="">Escolha uma opção</option>
+            <option value="adminstrador">Administrador</option>
+            <option value="usuario-io">Usuário</option>
+        </select>
+    </div>
+    <button class="btn waves-effect waves" type="submit" name="action" >Registrar</button>
+</form>
+{% endblock content%}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in lista %}
+                    <tr>
+                        <td>{{usuario.username}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>
+                            <a href="{% url 'remover_usuario' pk=usuario.pk %}">
+                                <i class="material-icons" >delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

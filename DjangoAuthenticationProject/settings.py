@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "DjangoAuthenticationApp",
 ]
 
+LOGIN_URL = '/logar/'
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
